@@ -1,0 +1,20 @@
+{
+  "name": "zugchess",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/StariGeri/zugchess.git",
+  "author": "Starosta Gergő Bence <sgergostarosta@gmail.com>",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:frontend": "yarn workspace frontend dev",
+    "dev:backend": "yarn workspace backend dev",
+    "dev": "concurrently \"yarn dev:frontend\" \"yarn dev:backend\""
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0"
+  }
+}
